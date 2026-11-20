@@ -1,0 +1,353 @@
+/* APLICATIVO */
+
+.app {
+    width: 390px;
+    height: 844px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    background: linear-gradient(145deg, #6AAB2E, #CFE8B7, #E6FFCC, #8FC2D3);
+
+    font-family: "Work Sans", sans-serif;
+}
+
+/* HEADER */
+
+header {
+    border: 1px solid rgba(223, 255, 189, 0.5);
+    
+}
+
+.navbar {
+    background: radial-gradient(ellipse 50% 25%, rgb(223, 255, 189), rgba(150, 232, 64, 0.2));
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    height: 62px;
+}
+
+.navbar-brand {
+    margin: 0px;
+    padding: 0px;
+}
+
+#logo {
+    width: 48px;
+    height: 48px;
+}
+
+#nome {
+    color: #01381B;
+    width: 176px;
+    font-size: 31px;
+    font-weight: 800;
+    line-height: 36px;
+    margin: 0px;
+}
+
+#lupa {
+    width: 32px;
+    height: 32px;
+}
+
+/* MAIN */
+
+main {
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+main::-webkit-scrollbar {
+    display: none; /* Chrome, Edge e Safari */
+}
+
+/* MENU */
+
+.nav {
+    width: 390px;
+    height: 80px;
+    background: radial-gradient(ellipse 70% 50%, rgba(150, 232, 64, 0.4), rgba(22, 128, 74, 0.1));
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+
+    li {
+        height: 80px;
+    }
+}
+
+.nav-item {
+    width: 130px;
+
+    img {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 4px;
+    }
+
+    h5 {
+        font-size: 12px;
+        line-height: 15px;
+        width: 62px;
+        text-align: center;
+        margin-bottom: 0px;
+        color: #01381B;
+    }
+
+    .active {
+        background-color: rgb(150, 232, 64, 0.5);
+
+        h5 {
+            font-weight: 700;
+        }
+    }
+}
+
+.nav-item:active {
+    background-color: rgb(150, 232, 64, 0.5);
+
+    h5 {
+        font-weight: 700;
+    }
+}
+
+/* INDEX */
+
+.inicio-card {
+    background-color: #C2E69E;
+    border: 1px solid #EAFAD9;
+    border-radius: 16px;
+    padding-top: 16px;
+    padding-bottom: 24px;
+
+    img {
+        width: 32px;
+        height: 32px;
+    }
+
+    h2 {
+        font-size: 21px;
+        color: #013818;
+        font-weight: 700;
+        line-height: 25px;
+        margin: 0px;
+    }
+
+    p {
+        text-align: justify;
+        font-size: 15px;
+        line-height: 18px;
+        color: #01381B;
+    }
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #101414;
+}
+
+/* VER ALERTAS */
+
+.select-container {
+    position: relative;
+    width: 100%;
+
+    img {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.alerta-selecionar {
+    display: block;
+    width: 100%;
+    padding: 12px 40px 12px 16px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: linear-gradient(to bottom right, #96E840, #01381B, #96E840) !important;
+    text-align: center;
+    border: 0px;
+    border-radius: 16px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("../imagens/arrow_down-branco.png");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 24px;
+
+    option {
+        background-color: rgb(150, 232, 64, 0.31);
+        color: #101414;
+    }
+}
+
+.alerta-selecionar:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.alerta-selecionar option:checked {
+    background-color: rgb(150, 232, 64, 0.71);
+    color: #101414;
+    font-weight: 600;
+}
+
+.alerta-card {
+    display: flex;
+    color: #101414;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    text-decoration: none;
+
+    .alerta-icone {
+        width: 32px;
+        height: 32px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    h3 {
+        font-size: 15px;
+        margin-bottom: 4px;
+        line-height: 18px;
+    }
+
+    h4 {
+        font-size: 13px;
+        margin: 0px;
+        font-weight: 400;
+        line-height: 14px;
+    }
+
+    .seta {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.alerta-incendio:active {
+    background-color: rgba(228, 0, 0, 0.6);
+
+    .alerta-icone {
+    content: url("../imagens/icone-incendio-transparente.png");
+    }
+}
+
+.alerta-temperatura:active {
+    background-color: rgba(228, 182, 0, 0.6);
+
+    .alerta-icone {
+    content: url("../imagens/icone-temperatura-transparente.png");
+    }
+}
+
+.alerta-arvore:active {
+    background-color: rgba(49, 228, 0, 0.6);
+
+    .alerta-icone {
+    content: url("../imagens/icone-arvore-transparente.png");
+    }
+}
+
+.alerta-chuva:active {
+    background-color: rgba(159, 178, 227, 0.6);
+
+    .alerta-chuva:active .alerta-icone {
+    content: url("../imagens/icone-chuva-transparente.png");
+    }
+}
+
+.alerta-vento:active {
+    background-color: rgba(0, 129, 228, 0.6);
+
+    .alerta-icone {
+    content: url("../imagens/icone-vento-transparente.png");
+    }
+}
+
+/* ALERTA X */
+
+.titulo {
+    background-color: #C2E69E;
+    border: 1px solid #FFFFFF;
+    border-radius: 16px;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+    h2 {
+        font-size: 21px;
+        line-height: 25px;
+        color: #101414;
+        font-weight: 700;
+        width: fit-content;
+        margin: 0px;
+    }
+}
+
+.alerta-info {
+    h3 {
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 18px;
+        margin-bottom: 4px;
+    }
+
+    h4 {
+        font-size: 15px;
+        line-height: 18px;
+        padding: 4px;
+        border: 1px solid rgba(223, 255, 189, 0.5);
+        background-color: #C2E69E;
+        margin-bottom: 16px;
+        text-align: justify;
+    }
+}
+
+#carouselExampleIndicators .carousel-indicators {
+    position: relative !important;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+#carouselExampleIndicators .carousel-indicators button {
+    background-color: #01381B;
+}
+
+.carousel-item {
+    img {
+        border-radius: 16px;
+    }
+}
+
+.btn-compartilhar {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 16px;
+    background: linear-gradient(to bottom right, #96E840, #01381B, #96E840) !important;
+
+    h3 {
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 500;
+        color: #FFFFFF;
+    }
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
